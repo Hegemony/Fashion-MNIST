@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import time
 import numpy as np
 import sys
-sys.path.append('F:/anaconda3/Lib/site-packages')  # 为了导入上层目录的d2lzh_pytorch
+sys.path.append('F:/anaconda3/Lib/site-packages')
 import d2lzh_pytorch as d2l
 
 mnist_train = torchvision.datasets.FashionMNIST(root='./Datasets/FashionMNIST', train=True,
@@ -26,13 +26,12 @@ print(len(mnist_train), len(mnist_test))
 # feature, label = mnist_train[0]
 # print(feature, feature.shape, label)
 
-# 本函数已保存在d2lzh包中方便以后使用
 def get_fashion_mnist_labels(labels):
     text_labels = ['t-shirt', 'trouser', 'pullover', 'dress', 'coat',
                    'sandal', 'shirt', 'sneaker', 'bag', 'ankle boot']
     return [text_labels[int(i)] for i in labels]
 
-# 本函数已保存在d2lzh包中方便以后使用
+
 def show_fashion_mnist(images, labels):
     d2l.use_svg_display()
     # 这里的_表示我们忽略（不使用）的变量
